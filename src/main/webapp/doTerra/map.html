@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>도테라코리아(doTerra)</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Maven+Pro&family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />  <!-- link:favicon -->
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div id="modal">
+		<div id="hide">&times;</div>
+		<iframe width="1280" height="720" src="https://www.youtube.com/embed/8IM4Ms5a_zY" title="정글러가 원딜에게 레드를 양보하는 이유 | 한화생명 vs. T1 게임1 하이라이트 | 07.13 | 2022 LCK 서머 스플릿" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+	<div id="hotItem">
+		<a href="#">
+			<img src="images/visual_item.png" alt="인기상품 무료체험 샘플신청">
+		</a>
+	</div>
+	<header>
+		<div class="header-wrap">
+			<div class="top-logo">
+				<a href="#">
+					<img src="images/logo.png" alt="도테라코리아">
+				</a>
+			</div>	
+		<nav class="main-nav">
+			<ul id="gnb">
+				<li><a href="#">COMPANY</a>
+					<ul class="lnb">
+						<li><a href="#">about</a></li>
+						<li><a href="#">vision</a></li>
+						<li><a href="#">history</a></li>
+						<li><a href="#">map</a></li>
+					</ul>
+				</li>
+				<li><a href="#">PRODUCT</a>
+					<ul class="lnb">
+						<li><a href="#">about</a></li>
+						<li><a href="#">vision</a></li>
+						<li><a href="#">history</a></li>
+						<li><a href="#">map</a></li>
+					</ul>
+				</li>
+				<li><a href="#">SCHEDULE</a>
+					<ul class="lnb">
+						<li><a href="#">about</a></li>
+						<li><a href="#">vision</a></li>
+						<li><a href="#">history</a></li>
+						<li><a href="#">map</a></li>
+					</ul>
+				</li>
+				<li><a href="#">SC CENTER</a>
+					<ul class="lnb">
+						<li><a href="#">about</a></li>
+						<li><a href="#">vision</a></li>
+						<li><a href="#">history</a></li>
+						<li><a href="#">map</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+		<div class="top-links">
+			<ul class="link-items">
+				<li><a href="#" onclick="alert('정보수정을 위해 재로그인 합니다.');location.href='login.html';">My Page</a></li>
+				<li><a href="#">LogOut</a></li>
+				<li><a href="#">CATALOGUE</a></li>
+			</ul>
+		</div>
+		</div>
+	</header>
+	<div class="hero-wrap">
+		<section class="hero">
+			<div class="hero-text">
+				<img src="images/visual_slogan.png" alt="everyday doTerra"/>
+			</div>
+			<div class="hero-bg">	
+				<img src="images/visual_bg.jpg" alt="visual"/>
+			</div>
+		</section>
+	</div>
+	<section id="main">
+		<div class="main-wrap">
+			<article>
+				<h2 class="d-none">main</h2>
+				<div class="map">
+					<h3>map</h3>
+					<!-- 카카오지도 HTML 코드 -->
+					<div id="map" style="width:1000px;height:400px;margin:0 auto;"></div>
+					
+					<!-- 실제 지도 그리는 javascript 코드 -->
+					<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=092afdaab0a64fff5d14ff2ba6282e53"></script>
+					
+					<!-- 실제 지도 띄우는 코드, 가급적 body 앞에 작성 -->
+					<script>
+						var container = document.getElementById('map');
+						var options = {
+							center: new kakao.maps.LatLng(35.153488, 126.888049),
+							level: 3 	/* 숫자 클수록 위성 */
+						};
+				
+						var map = new kakao.maps.Map(container, options);
+						
+						// 마커가 표시될 위치입니다 
+						var markerPosition  = new kakao.maps.LatLng(35.153488, 126.888049); 
+
+						// 마커를 생성합니다
+						var marker = new kakao.maps.Marker({
+						    position: markerPosition
+						});
+
+						// 마커가 지도 위에 표시되도록 설정합니다
+						marker.setMap(map);
+						
+						var iwContent = '<div style="padding:5px;">도테라 코리아(광주지점) <br><a href="https://map.kakao.com/link/map/도테라 코리아(광주지점),35.153488, 126.888049" style="color:blue" target="_blank">큰지도보기</a> <a href="https://map.kakao.com/link/to/도테라 코리아(광주지점),35.153488, 126.888049" style="color:blue" target="_blank">길찾기</a></div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+					    iwPosition = new kakao.maps.LatLng(35.153488, 126.888049); //인포윈도우 표시 위치입니다
+
+					// 인포윈도우를 생성합니다
+					var infowindow = new kakao.maps.InfoWindow({
+					    position : iwPosition, 
+					    content : iwContent 
+					});
+					  
+					// 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
+					infowindow.open(map, marker);
+					</script>
+				</div>
+				<div class="traffic">
+					<ul>
+						<li>
+							택시
+						</li>
+						<li>
+							버스
+						</li>
+						<li>
+							지하철
+						</li>
+					</ul>	
+				</div>
+			</article>
+		</div>
+	</section>
+	<aside>
+		<div class="aside-wrap">
+			<ul class="social-icons">
+				<li><a href="#"><img src="images/sns1.png" alt="facebook"></a></li>
+				<li><a href="#"><img src="images/sns2.png" alt="blog"></a></li>
+				<li><a href="#"><img src="images/sns3.png" alt="instagram"></a></li>
+				<li><a href="#"><img src="images/sns4.png" alt="kakaostory"></a></li>
+				<li><a href="#"><img src="images/sns5.png" alt="youtube"></a></li>
+			</ul>
+			<ul class="extra-icons">
+				<li><a href="#">온라인 판매 가이드 라인</a></li>
+				<li><a href="#">웹 사이트 사전 심의 요청서</a></li>
+			</ul>
+		</div>
+	</aside>
+	<footer>
+		<div class="bottom-logo">
+			<a href="#"></a>
+		</div>
+		<ul class="links">
+			<li><a href="#">이용약관</a></li>
+			<li><a href="#">이용안내</a></li>
+			<li><a href="#">개인정보취급방침</a></li>
+			<li><a href="#">고객센터</a></li>
+		</ul>
+		<div class="footer-wrap">
+			<p class="site-info">
+			상호명 : 도테라코리아 대표자 : 홍길동 사업자등록번호 : 220-88-59855 주소 : 서울특별시 서초구 강남대로 369 (서초동, 나라빌딩) 고객센터 : 02-2137-5490
+			</p>
+			<p class="site-owner">
+			copyright 2017. doTerra all rights reserved.
+			</p>
+		</div>
+	</footer>
+	<script src="script/main.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

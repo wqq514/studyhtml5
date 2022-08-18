@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8" />
+	<title>커플레이 - 신개념 놀이문화</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+	<!-- header+.title+section#main+aside+footer|c -->
+	<header>
+		<div class="header_top">
+			<ul class="top_links">
+				<li>
+					<a href="extras/login.html">로그인</a>
+				</li>
+				<li>
+					<a href="#">회원가입</a>
+				</li>
+				<li>
+					<a href="extras/cart.html">장바구니</a>
+				</li>
+				<li>
+					<a href="extras/list_order.html">주문조회</a>
+				</li>
+			</ul>
+		</div>
+		<div class="header_mid" id="logo">
+			<a href="#">
+				<img src="images/logo.png" alt="couplay">
+			</a>
+		</div>
+		<div class="header_bottom">
+			<nav class="main-nav">
+				<ul id="gnb">
+					<li><a href="docs/shopping.html">shopping</a></li>
+					<li><a href="docs/sales.html">sales</a></li>
+					<li><a href="docs/event.html">event</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<div class="title">
+		<p class="text_big">join</p>
+		<p class="text_small">회원가입</p>
+	</div>
+	<section>
+		<div class="form_wrap">
+			<form>
+				<fieldset>
+					<legend>가입구분</legend>
+					<div class="field_wrap">
+						<label class="row row_header row_border_right">회원구분</label>
+						<div class="row row_header">
+							<input type="radio" id="indivisual" name="type" checked>
+							<label for="indivisual">개인회원</label>
+							<input type="radio" id="business" name="type" checked>
+							<label for="business">사업자회원</label>
+						</div>
+					</div>
+				</fieldset>
+				<fieldset>
+					<legend>기본정보</legend>
+					<div class="field_wrap">
+						<div class="row row_header d-flex">
+							<label for="user_id" class="flex-1 row_border_right">아이디</label>
+							<input type="text" id="user_id" name="user_id" maxlength="16" required class="flex-3">
+						</div>
+					</div><!-- /.field_wrap -->
+					<div class="field_wrap">
+						<div class="row d-flex">
+							<label for="user_pw" class="flex-1">비밀번호</label>
+							<input type="password" id="user_pw" name="user_pw" maxlength="12" required class="flex-3">
+						</div>
+					</div>
+					<!-- /.field_wrap -->
+					<div class="field_wrap">
+						<div class="row d-flex">
+							<label for="user_pw2" class="flex-1">비밀번호 확인</label>
+							<input type="password" id="user_pw2" name="user_pw2" maxlength="12" required class="flex-3">
+						</div>
+					</div>
+					<!-- /.field_wrap -->
+					<div class="field_wrap">
+						<div class="row d-flex">
+							<label for="user_name" class="flex-1">이름</label>
+							<input type="text" id="user_name" name="user_name" required class="flex-3">
+						</div>
+					</div>
+					<!-- /.field_wrap -->
+					<div class="field_wrap">
+						<div class="row d-flex">
+							<label for="user_phone" class="flex-1">연락처</label>
+							<input type="tel" id="user_phone" name="user_phone" maxlength="11" required class="flex-3">
+						</div>
+					</div>
+					<!-- /.field_wrap -->
+					<div class="field_wrap">
+						<div class="row d-flex">
+							<label for="user_sms" class="flex-1">SMS수신여부</label>
+							<div class="flex-3"><input type="checkbox" id="user_sms" name="user_sms" required> 수신함</div>
+						</div>
+					</div>
+					<!-- /.field_wrap -->
+					<div class="field_wrap">
+						<div class="row d-flex">
+							<label for="user_email" class="flex-1">이메일</label>
+							<input type="text" id="user_email" name="user_email" placeholder="email@naver.com 형식으로 작성" class="flex-3">
+						</div>
+					</div>
+					<!-- /.field_wrap -->
+					<div class="field_wrap">
+						<div class="row d-flex">
+							 <!--<label for="user_profile" class="flex-1">프로필사진</label>
+							<input type="file" id="user_profile" name="user_profile" class="flex-3"> -->
+							<div class="flex-2">프로필 사진</div>
+							<div class="flex-3">
+								<input type="text" id="attach_file" disabled="true" class="flex-1">
+								<input type="file" id="user_profile" name="user_profile">
+								<label for="user_profile">찾아보기</label>
+							</div>
+						</div>
+					</div>
+					<!-- /.field_wrap -->
+					<!-- <script>
+					const attachFile = document.querySelector("#user_proflie"); // ID가 user_profile인 것을 attachFile이란 이름으로 선택
+					
+					const fileField = document.querySelector("#attach_file")	//
+					
+					attachFile.addEventListener("change", function(e){ 	 	    //attachFile의 값이 변경되는 change 이벤트 발생하면
+					
+					// 경로 + 파일 (경로는 fake_path로,)
+					let fileName = e.target.value;
+					fileField.value = fileName;
+					console.dir(e);	
+					})
+					</script>-->
+						<div class="field_wrap">
+							<div class="row d-flex justify-center col-gap pad">
+								<input type="submit" value="가입">
+								<input type="reset" value="취소">
+							</div>
+						</div>
+						<!-- /.field_wrap -->
+				</fieldset>
+			</form>
+		</div>
+	</section>
+	<aside>
+		<ul class="extra_links">
+				<li>
+					<a href="#">이용약관</a>
+				</li>
+				<li>
+					<a href="#">개인정보취급방침</a>
+				</li>
+				<li>
+					<a href="#">이용안내</a>
+				</li>
+				<li>
+					<a href="#">고객센터</a>
+				</li>
+		</ul>
+			<div class="move_top">
+			<a href="#">
+				<span class="material-symbols-outlined">
+					arrow_upward
+				</span>
+			</a>
+			</div>
+	</aside>
+	<footer>
+		<p class="addr">광주광역시 서구 경열로 3,couplay</p>
+		<p class="info">COPYRIGHT&COPY; 2017 ALL RIGHTS RESERVED.</p>
+	</footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

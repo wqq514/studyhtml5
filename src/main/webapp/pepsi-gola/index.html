@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="favicon.ico">
+<title>Pepsi-Gola</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+<link href="style.css" rel="stylesheet">
+</head>
+<body>
+	<div id="mobile_panel" class="blue-bg fixed d-none">
+		<div class="only_mobile blue-bg fixed blue" id="closer">
+			<span class="material-symbols-outlined text-white">
+				close
+			</span>
+			<h2 class="underlined text-white">펩시골라</h2>
+			<ul class="mobile_links text-white">
+				<li><a href="about.html">펩시소개<span class="material-symbols-outlined">
+					arrow_outward
+					</span></a>
+				</li>
+				<li><a href="#">콜라종류<span class="material-symbols-outlined">
+					arrow_outward
+					</span></a>
+				</li>
+				<li><a href="#">갤러리<span class="material-symbols-outlined">
+					arrow_outward
+					</span></a>
+				</li>
+				<li><a href="#">고객센터<span class="material-symbols-outlined">
+					arrow_outward
+					</span></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<header>
+		<div class="only_mobile absolute-right" id="opener">
+			<span class="material-symbols-outlined">
+			menu
+			</span>
+		</div>
+		<div id="logo" class="mx-auto py-3">
+			<a href="index.html"><img src="images/logo.png" alt="펩시골라"></a>
+		</div>
+		<nav class="mainNav only_pc">
+			<ul id="gnb">
+			<li><a href="#">펩시소개</a></li>
+			<li><a href="#">콜라종류</a></li>
+			<li><a href="#">갤러리</a></li>
+			<li><a href="#">고객센터</a></li>
+			</ul>
+		</nav>
+	</header>
+	<section>
+		<article id="visual">
+			<figure>
+				<img src="images/visual.png" alt="2022 펩시골라 신제풀 출시">
+				<figcaption class="d-none">펩시골라 신제품</figcaption>
+			</figure>
+		</article>
+		<article id="movie">
+			<h1>MOVIE</h1>
+			<H2>무비감상</H2>
+			<div class="moviePoster">
+				<img src="images/movie1.jpg" alt="포스터1">
+				<img src="images/movie2.jpg" alt="포스터2">
+			</div>
+		</article>
+	</section>
+	<aside>
+		<ul class="sns">
+			<li><a href="#"><img src="images/kakao_icon.png" alt="카카오톡"></a></li>
+			<li><a href="#"><img src="images/naver_icon.png" alt="네이버블로그"></a></li>
+			<li><a href="#"><img src="images/yellow_icon.png" alt="카카오스토리"></a></li>
+			<li><a href="#"><img src="images/insta_icon.png" alt="인스타그램"></a></li>
+		</ul>
+		<h3 class="upper">pepsi cs center</h3>
+		<p class="big-text bold">1566-3082</p>
+	</aside>
+	<footer>
+		<p class="addr">광주광역시 서구 경열로3(농성동)</p>
+		<p class="copy">copy&copyright; 2017</p>
+	</footer>
+	<script>
+		// 마우스로 오프너(모바일메뉴) 클릭
+		const openBtn = document.querySelector("#opener");
+		const sidePane = document.querySelector("#mobile_panel");
+		
+		//클릭하면 패널 나타남
+		openBtn.addEventListener("click", function(){
+			sidePane.classList.add("show");
+		});
+		
+		const closeBtn = document.querySelector("#closer");
+		//모바일 닫기 클릭
+		closeBtn.addEventListener("click", function(){
+			sidePane.classList.remove("show");			//sidePane의 클래스목록에 .show 제거
+		});
+		
+		
+		//모바일 패널 사라짐(숨겨짐)
+		
+		
+		
+		
+	</script>
+</body>
+</html>

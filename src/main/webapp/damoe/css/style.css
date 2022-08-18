@@ -1,0 +1,154 @@
+@charset "UTF-8";
+@import "./reset.css";
+
+/* 문서여백값 : 0 */
+body{									/* 공통 */
+	background-image: url("../images/bg.png");
+	font-family: "Maven Pro", "Noto Sans KR", Sans-serif;
+	font-size: 14px;
+	color:#000000;						/* black */
+}
+ul{
+	list-style-type: none;
+}
+.header-wrap{
+	max-width:1000px;					/* 폰에서는 가득 채워줌 */
+	margin:0 auto;						/* 가운데로 배치 */
+	padding: 50px 0;					/* 안쪽 여백 : 상하 각각 50xp */
+}
+.header-wrap::after{					/* clearFix 기법 : float 해제 코드 */
+	content: '';
+	display: block;
+	clear:both;
+}
+.main-logo{
+	float:left;
+}
+.main-nav{
+	float:left;
+}
+#gnb{
+	border-left: 1px solid #000;
+	padding-left:1rem;
+}
+#gnb li{
+	margin-bottom: 10px;
+}
+#gnb a{
+	color: #666;						/* #66 66 66 */
+	text-decoration: none;				/* 텍스트-꾸밈 : 없음(=밑줄 해제) */
+}
+#gnb a:hover{							/* pseudo-class : hand over(=hover) */
+	color: #604449;
+}
+.main-icons{
+	float:right;
+}
+.main-icons li{
+	display: inline-block;
+}
+.main-icons a{
+	opacity: .3;						/* 투명도 */
+}
+.main-icons a:hover{
+	opacity: 1;
+}
+.event{
+	position: absolute;					/* sticky : static + absolute 아직 표준 아님 */
+	right:5%;							/* 오른쪽에서 x%만큼 떨어지게 */
+	top:20%;
+}
+.visual{
+	background-image: url("../images/visual_bg.jpg");
+	background-repeat:no-repeat;		/* 배경-반복 : 안함 */
+	background-position:center center;			/* 배경-위치 : 가로 세로 */
+	background-size:cover;						/* 배경-크기 : 커버(공간 메우기) */
+	height: 400px;
+}
+.visual figure{
+	max-width: 1000px;
+	min-height: 400px;
+	margin: 0 auto;
+	position: relative;
+}
+#visualImg{
+	position: absolute;
+	right: 0;
+	bottom: -80px;
+}
+.d-none{
+	text-indent: -9999px;					/* 모니터 밖으로 나감 */
+	visibility: hidden;						/* 텍스트 공간은 있음 */
+}
+#main{
+	overflow: hidden;						/* float문제 해결위함은 아님 */
+}
+.article_wrap{
+	max-width: 1000px;
+	margin: 100px auto 50px;
+}
+.article_wrap> article:nth-child(1){
+	float: left;
+	width:658px;							/* 65.8% */
+}
+article h2{
+	font-size: 20px;
+	font-weight: 700;
+	margin-bottom: 1rem;
+	text-transform: capitalize;				/* 텍스트 변형 : 첫글자 대문자 */
+}
+.items li{
+	float: left;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	width:317px;
+	overflow: hidden;						/* 넘침 : 숨김 */
+}
+.items li:hover{
+	border-color: #604449;
+}
+.items li img{
+	transition:transform .1s ease-in-out;	/* 변형 : 변형 0.4초동안 가속도 효과 */
+}
+.items li:hover img{
+	transform:scale(1.1);					/* 변형 : 크기(1.1배) */
+}
+.items li:nth-child(1){
+	margin-right: 23px;
+}
+.article_wrap> article:nth-child(2){
+	float: right;
+	width:342px;							/* 34.2% */
+}
+.pr{
+	width:319px;
+	margin-left: 23px;
+}
+.aside_wrap{
+	max-width: 1000px;
+	margin:50px auto;
+	display: flex;
+	align-items: center;
+	column-gap: 2rem;
+}
+.aside_wrap h2{
+	font-size:20px;
+	font-weight: 700;			/* 글꼴-두께 : 100~900, bold, bolder, thin */
+}
+.aside_wrap p{
+	font-size: 14px;
+	color: #666;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

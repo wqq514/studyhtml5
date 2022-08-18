@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="favicon.png">
+<title>문서를 구역별로 나누는 예시(p.91)</title>
+<style>
+div {
+	margin: 1rem;						/*바깥여백*/
+	padding:1rem;						/*안쪽여백*/
+}
+#header {		
+	background-color: gold;				/*배경색*/
+	color: white;						/*글자색*/
+}
+.box {
+	border: 1px solid #333;				/*테두리: 1px 직선 검정*/
+}
+#content {		
+	background-color: orange;			/*배경색*/
+	color: green;						/*글자색*/
+}
+#footer {		
+	background-color: gray;				/*배경색*/
+	color: white;						/*글자색*/
+}
+</style>
+</head>
+<body>
+	<div id="header">
+		<div id="logo" class="box">로고</div>
+		<div id="auth" class="box">인증</div>
+	</div>
+	<div id="content">
+	<figure>
+		<img src="https://picsum.photos/id/237/200/300" alt="picsum"> 
+		<figcaption>picsum 이미지 제목</figcaption>
+	</figure>
+	<p>본문입니다</p>
+	</div>
+	<div id="footer">
+	<p>주소 : 광주 서구 경열로 3 (농성동) 한울직업전문학교</p>
+	</div>
+</body>
+</html>

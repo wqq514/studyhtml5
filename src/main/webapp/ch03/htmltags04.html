@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link rel="icon" href="favicon.png">
+<style>
+	table, td{			/* , = 그룹*/
+		border: 1px solid #333; 		/* 선: 두께 1픽셀, 직선, #검정색 */
+		border-collapse: collapse;		/*선-겹침: 겹쳐서 표현 (중요)*/
+	}
+	#td1{
+		width: 800px;		/*폭(넓이): px(절대크기), %(상대크기)*/
+		margin: 0 auto;		/*여백: 상하0, 좌우 알아서(=가로 가운데 배치)*/
+	}
+	th{
+		background-color: #d0e0f5;
+	}
+	td,h1,figure {
+		text-align: center;		 /*텍스트-정렬: 가운데*/
+	}
+</style>
+</head>
+<body>
+	<h1>교육 시간표</h1>
+	<figure>
+	<figcaption>지금방식/앞으로의 표 제목</figcaption>
+	</figure>
+	<table id ="td1">
+		<tr>
+			<th>시간/요일</th>
+			<th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th>비고</th>
+		</tr>
+		<tr>
+			<td>1교시<br>(09:20~10:10)</td>
+			<td rowspan="4">VIEW<br>(HTML5&CSS3)</td>
+			<td rowspan="4">VIEW<br>(HTML5&CSS3)</td>
+			<td rowspan="4">VIEW<br>(HTML5&CSS3)</td>
+			<td rowspan="4">VIEW<br>(HTML5&CSS3)</td>
+			<td rowspan="4">VIEW<br>(HTML5&CSS3)</td>
+			<td rowspan="9">외부 강의실 대관(07.02)</td>
+		</tr>
+		<tr>
+			<td>2교시<br>(10:20~11:10)</td>
+														<!--  &nbsp: Entity(Non-Breaking Space-공백 1칸) -->
+		</tr>
+		<tr>
+			<td>3교시<br>(11:20~12:10)</td>
+		</tr>
+		<tr>
+			<td>4교시<br>(12:20~13:10)</td>
+		</tr>
+		<tr>
+			<td>5교시<br>(13:20~14:10)</td>
+			<td rowspan="9">JAVA</td>
+			<td rowspan="9">JAVA</td>
+			<td rowspan="9">JAVA</td>
+			<td rowspan="9">JAVA</td>
+			<td rowspan="9">JAVA</td>
+		</tr>
+		<tr>
+			<td>6교시<br>(14:20~15:10)</td>
+		<tr>
+			<td>7교시<br>(15:20~16:10)</td>
+		</tr>
+		<tr>
+			<td>8교시<br>(16:20~17:10)</td>
+		</tr>
+		<tr>
+			<td>9교시<br>(17:20~18:10)</td>
+		</tr>
+	</table>
+</body>
+</html>
+
+<!-- rowspan="n" : 행 합치기 / colspan="n" : 열 합치기 -->

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<style>
+.tg{
+	background: yellowgreen;
+	color:white;
+}
+#pop{
+	width:400px;
+	height: 350px;
+	position: absolute;				
+	left:50%;							
+	top:50%;
+	transform:translate(-50%,-50%); 
+	background: white;
+	box-shadow: 0 0 10px 0 rgba(0,0,0,3);
+}
+#pop button{
+	background: black;
+	color:white;
+	position: absolute;
+	right:50px;
+	top:50px;
+	padding:25px;
+	font-size:2rem;
+}
+</style>
+</head>
+<body>
+	<div id="pop">
+		<h1>팝업입니다.</h1>
+		<p>팝업 내용입니다.</p>
+		<button>&times;</button>
+	</div>
+	<h1>기본 선택자 실습</h1>
+	<ul id="list">
+		<li>1-1-1-1</li>
+		<li id="el">1-2-1-1</li>
+		<li>1-3-1-1</li>
+		<li class="tg">1-4-1-1</li>
+		<li>1-5-1-1</li>
+	</ul>
+	<button class="recall">팝업 다시보기</button>
+
+	<script>
+		const isOpen = true;									// 팝업이 열린 상태인지 기억하는 변수
+		$(function(){
+			//	아이디 값이 el인 요소 선택 후 배경색 지정 (하이픈 사용X, 카멜은 가능)
+		//	$("#el").css("backgroundColor","yellowgreen");		// 배경색
+		//	$("#el").css("color","red");						// 글자색
+		//	$("#el").css("fontSize","2rem");					// 글자크기
+			$("#el").css({
+				"background":"yellowgreen",
+				"color":"red",
+				fontSize:"2rem"									// ""생략가능
+			})//#el
+			
+			$(".tg").css({
+				color:"blue",
+				border:"2px solid skyblue",
+				margin:"1rem",
+				padding:".5rem 0"
+			})//.tg
+			
+			let closeBT = $("#pop button");
+			closeBT.click(function(){			// click 하면 내부 코드 실행
+				$("#pop").css("display","none");
+				isOpen = false;					// 창 닫고 상태변수 값도 변경
+			});
+			
+			let recallBT = $(".recall");
+		//	recallBT.click();					// click 명령
+			recallBT.click(function(){			// click하면 function내부 코드 실행
+				if(!isOpen){
+					$("#pop").css("display","block");	
+					isOpen = true;					
+				}else{
+					console.log("팝업동작 오류")
+				}//if
+			});									
+		})//function()
+		
+		const bg = $(".tg").css("background");
+		console.log("tg의 배경색 : " +bg);						// get 알아오기  , set 설정하기
+		/* const tg = document.querySelector(".tg");			JavaScript
+		tg.style.color = "blue";
+		tg.style.border = "2px solid skyblue";
+		tg.style.margin = "1rem";
+		tg.style.padding = ".5rem 0"; 
+		*/
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

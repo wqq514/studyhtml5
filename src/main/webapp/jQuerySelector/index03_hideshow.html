@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+<body>
+	<h1>셀렉터 사용 예제(p.472 ~ 475)</h1>
+	<div class="btns">
+		<button>id="pic1" 이미지 숨기기</button>
+		<button>class="c1" 이미지 숨기기</button>
+		<button>모든 이미지 숨기기</button>
+		<button>숨기기 취소</button>
+	</div>
+	<figure id="pic1">
+		<img src="https://picsum.photos/id/1/100" alt="" />
+		<figcaption>id="pic1" 이미지 숨기기</figcaption>
+	</figure>
+	<figure class="c1">
+		<img src="https://picsum.photos/id/2/100" alt="" />
+		<figcaption>class="c1" 이미지 숨기기</figcaption>
+	</figure>
+	<figure>
+		<img src="https://picsum.photos/id/3/100" alt="" />
+		<figcaption>모든 이미지 숨기기</figcaption>
+	</figure>
+	<figure>
+		<img src="https://picsum.photos/id/4/100" alt="" />
+		<figcaption>숨기기 취소</figcaption>
+	</figure>
+	<script>
+	$(function(){
+		$("button").eq(0).click(function(){
+			$("#pic1").hide(400,function(){				// .css("display","none")  숫자 값은 ms(1/1000 sec)
+				alert("id=\"pic1\"요소 숨김")
+			});										
+		})
+		$("button").eq(1).click(function(){
+			$(".c1").hide(200); 						// .show = .css("display","block")
+		})
+		$("button").eq(2).click(function(){
+			$("figure").hide("fast");
+		})
+		$("button").eq(3).click(function(){
+			$("figure").toggle();						
+		})
+	})
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>대한은행</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+	<div id="mobileNav">
+	<div class="btn d-flex flex-end"><!-- justify-content:flex-end -->
+		<button id="closer">닫기<span class="scale-up">&times;</span></button>
+	</div>
+		<form action="search.jsp" autocomplete="off">
+			<div>
+				<label for="keywords" class="d-flex">검색어</label>
+				<input type="search" id="keywords" placeholder="금융상품 최저금리 검색"/>
+				<input type="submit" id="keywords"/>
+			</div>
+		</form>
+		<div class="m-nav">
+			<nav>
+				<dl>
+					<dt>개인</dt>
+					<dd>
+						<ul>
+							<li><a href="#">조회</a></li>
+							<li><a href="#">이체</a></li>
+							<li><a href="#">공과금</a></li>
+							<li><a href="#">예금/신탁</a></li>
+						</ul>
+					</dd>
+				</dl>
+				<dl>
+					<dt>기업</dt>
+					<dd>
+						<ul>
+							<li><a href="#">조회</a></li>
+							<li><a href="#">이체</a></li>
+							<li><a href="#">전자결제</a></li>
+							<li><a href="#">수표/어음</a></li>
+						</ul>
+					</dd>
+				</dl>
+				<dl>
+					<dt>금융상품</dt>
+					<dd>
+						<ul>
+							<li><a href="#">저축상품</a></li>
+							<li><a href="#">대출상품</a></li>
+							<li><a href="#">투자상품</a></li>
+						</ul>
+					</dd>
+				</dl>
+				<dl>
+					<dt>카드</dt>
+					<dd>
+						<ul>
+							<li><a href="#">카드정보</a></li>
+							<li><a href="#">카드신청</a></li>
+							<li><a href="#">이용내역조회</a></li>
+						</ul>
+					</dd>
+				</dl>
+			</nav>
+		</div>
+	</div>
+	<div id="layer-popup">
+		<div class="popup-wrap">
+			<p class="popup-title">타이틀</p>
+			<p class="popup-body">Lorem dsfjlkjfklds fjsfjsoifajdfijfjskhfjkdhf fhusafhskfhdjukh eafshdjfhjkjdshfjd ksfhsjkfhaufhsdukfhsdukjfahsdfhsudkfhsukhfuskfhdjkfhasdf eufahsdkfhsjdk
+				<blockquote>대한은행</blockquote>	<!-- 인용문 -->
+			</p>
+			<a href="#" class="btn btn-close">닫기&times;</a>
+		</div>
+	</div>
+	<h1 class="d-none">대한은행</h1>
+	<header>
+		<div class="header-wrap">
+			<div class="logo">
+				<img src="images/main-logo-removebg.png" alt="bank of daehan">
+			</div>
+			<nav class="main-nav">
+				<ul id="gnb">
+					<li><a href="#">개인</a>
+						<ul class="lnb">
+							<li><a href="#">조회</a></li>
+							<li><a href="#">이체</a></li>
+							<li><a href="#">공과금</a></li>
+							<li><a href="#">예금/신탁</a></li>
+						</ul>
+					</li>
+					<li><a href="#">기업</a>
+						<ul class="lnb">
+							<li><a href="#">조회</a></li>
+							<li><a href="#">이체</a></li>
+							<li><a href="#">전자결제</a></li>
+							<li><a href="#">수표/어음</a></li>
+						</ul>					
+					</li>
+					<li><a href="#">금융상품</a>
+						<ul class="lnb">
+							<li><a href="#">저축상품</a></li>
+							<li><a href="#">대출상품</a></li>
+							<li><a href="#">투자상품</a></li>
+						</ul>					
+					</li>
+					<li><a href="#">카드</a>
+						<ul class="lnb">
+							<li><a href="#">카드정보</a></li>
+							<li><a href="#">카드신청</a></li>
+							<li><a href="#">이용내역조회</a></li>
+						</ul>					
+					</li>
+				</ul>
+			</nav>
+			<div class="burger">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+	</header>
+	<div class="slide">
+		<div id="imgs">
+			<img src="images/carousel.png" alt="캐러셀">
+		</div>
+	</div>
+	<section id="main">
+		<article>
+			<div class="article-wrap">
+				<div class="news">
+					<h2><a href="#" class="selected">공지사항</a><a href="#">갤러리</a></h2>
+					<div class="news-lastest" id="opener">
+						<img src="images/new-thumb.png" alt="인공지능 은행원">
+						<div class="news-text">
+							<p class="text-title">인공지능 은행원 일반화 되나?</p>
+							<p class="text-body">AI 은행원, 예적금 신규...인공지능 전문 상담직원...</p>
+							<p class="text-info"><span class="wr-date">2022-07-18</span><span class="wr-name rounded-rect">대한은행</span></p>
+						</div>
+					</div>
+				</div>
+				<div class="event">
+					<h2 class="d-none">배너</h2>
+					<div class="event-body">
+						<a href="#"><img src="images/event.png" alt="요기요 콜라보 이벤트"></a>
+					</div>
+					<button id="showDetails">+더보기</button>
+				</div>
+				<div class="icons">
+					<h2 class="d-none">바로가기</h2>
+					<ul class="quick-links">
+						<li><a href="#"><img src="images/icon1.png" alt="조회/이체"><p>조회/이체</p></a></li>
+						<li><a href="#"><img src="images/icon2.png" alt="인증센터"><p>인증센터</p></a></li>
+						<li><a href="#"><img src="images/icon3.png" alt="금융사고신고"><p>금융사고신고</p></a></li>
+					</ul>
+				</div>
+			</div>
+		</article>
+	</section>
+	<footer>
+		<div class="footer-wrap">
+			<div class="logo-footer"><a href="#"><img src="images/main-logo-removebg.png" alt="대한은행"></a>
+			<div class="links-owner">
+				<ul class="links">
+					<li><a href="#">개인정보취급방침</a></li>|
+					<li><a href="#">이용약관</a></li>|
+					<li><a href="#">사이트맵</a></li>
+				</ul>
+				<p class="owner">COPYRIGHT&copy;대한은행(bank of daehan). ALL RIGHTS RESERVED.</p>
+			</div>
+			</div>
+		</div>
+	</footer>
+<script src="script/main.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

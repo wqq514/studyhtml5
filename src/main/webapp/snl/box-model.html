@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8" />
+	<title>css 레이아웃 기법</title>
+<style>
+/* 스타일 초기화 */
+*::before
+*::after{
+	box-sizing: border-box;
+}
+body {
+	height: 3000px;
+}
+#pos {
+	padding: 20px;
+	border: 1px solid #333;
+}
+	/* margin, position : 음수 값 */
+.wrap {
+	position: relative;
+	width:600px;
+	height: 400px;
+	background-color: gray;
+}
+.static {
+	position: absolute;	/*static 제외 나머지 속성 : top, right, left, bottom 표기가능 */
+	background-color:coral;
+	right:5%;
+	bottom:5%;
+	cursor: pointer;	/* 마우스 커서 : 포인터 */
+}	
+.float_box{
+	background-color: gold;
+	width:100%;
+	height: 400px;
+}
+.float_box>div {
+	border: 1px solid #333;
+}
+.box1 {
+	background-color: red;
+	width:100%;
+	height:100px;
+	float:left;
+}
+.box2 {
+	background-color: green;
+	width:50%;
+	height:300px;
+	float: right;
+}
+.box3 {
+	background-color: blue;
+	width:50%;
+	height:300px;
+	float:left;
+}
+</style>
+</head>
+<body>
+	<h1>position 기법</h1>
+	<ul>
+		<li>static</li>
+		<li>relative</li>
+		<li>absolute</li>
+		<li>fixed</li>
+	</ul>
+	<div class="wrap">
+		<div id="pos" class="static">🔺</div>
+	</div>
+	<!-- /.wrap -->
+	<h2>float 기법</h2>
+	<ul>
+		<li>left</li>
+		<li>right</li>
+	</ul>
+	<div class="float_box">
+		<div class="box1">1</div>
+		<div class="box2">2</div>
+		<div class="box3">3</div>
+	</div>
+	<h2>float 해제 기법</h2>
+	<ul>
+		<li>clear: (방향)</li>
+		<li>clearFix</li>
+		<li>overFlow hidden</li>
+	</ul>
+	<h3>flex, grid</h3>
+	<ul>
+		<li>1차원 레이아웃 : flex</li>
+		<li>2차원 레이아웃 : grid (=table 대신 사용하기도함)</li>
+	</ul>
+</body>
+</html>

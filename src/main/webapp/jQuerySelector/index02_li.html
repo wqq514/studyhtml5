@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+<body>
+	<div id="box">
+		위치 탐색 선택자 실습 : .first(), .last(), nth-child(n), :홀수, :짝수
+		<ul id="el">
+			<li>2-1-1-1</li>
+			<li>2-2-1-1</li>
+			<li>2-3-1-1</li>
+			<li>2-4-1-1</li>
+			<li>2-5-1-1</li>
+		</ul>
+	</div>
+	
+	<script>
+		$(function(){
+		//	$("#el li:last").css("background","dodgerblue");		// #el 찾고 li들의 위치에 따른 선택 실습
+		//	console.log("전체 li의 개수 : " +$("#el li").length);	// 전체 개수
+		//	$("#el li:gt(2)").css("background","yellowgreen");
+		//	$("#el li:frist").css("background","yellowgreen");		// $("#el li:first") -> 곧 사라짐
+		//	$("#el li").first().css("background","yellowgreen");	// 권장사항
+			$("#el li").even().css("background","skyblue");			// 짝수번째 줄
+			$("#el li").odd().css("background","gray");				// 홀수번째 줄
+		})
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

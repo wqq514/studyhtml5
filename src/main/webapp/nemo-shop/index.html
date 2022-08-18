@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>네모샵</title>
+	<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<div class="logo">
+			<a href="#">
+				<img src="images/nemo-logo.png" alt="네모샵">
+			</a>
+		</div>
+		<div class="title-bar">membership</div>
+	</header>
+	<section id="main">
+		<article>
+			<h2 class="d-none">회원 로그인</h2>
+			<form autocomplete="off" name="loginForm" method="post">
+				<fieldset>
+					<div class="field_wrap">
+						<legend>회원 로그인</legend>
+						<ul class="member">
+							<li>
+								<label class="d-none" for="user_id">아이디</label>
+								<input type="text" id="user_id" name="user_id" required>
+							</li>
+							<li>
+								<label class="d-none" for="user_pw">비밀번호</label>
+								<input type="password" id="user_pw" name="user_pw" required>
+							</li>
+							<li>
+								<input type="checkbox" id="save_id" checked="true" />
+								<label for="save_id">아이디 저장</label>
+							</li>
+							<li>
+								<input type="submit" value="로그인" id="loginBtn">
+								<input type="button" value="회원가입" id="joinBtn">
+							</li>
+						</ul>
+					</div>
+				</fieldset>
+				<fieldset>
+					<div class="field_wrap">
+						<legend>비회원 로그인</legend>
+						<ul class="guest">
+							<li>
+								<label for="order_num">주문번호</label>
+								<input type="text" id="order_num" name="order_num" />
+							</li>	
+							<li>
+								<label for="first_num">연락처</label>
+								<select id="first_num" name="order_phone">
+									<option vaule="010">02</option>
+									<option vaule="062">062</option>
+									<option vaule="010">010</option>
+									<option vaule="011">011</option>
+									<option vaule="017">017</option>
+									<option vaule="018">018</option>
+								</select>
+								-
+								<input type="tel" id="mid_num" maxlength="4">
+								-
+								<input type="tel" id="last_num" maxlength="4">		<!-- number : count -->
+							</li>
+							<li>
+								<input type="button" value="주문조회" id="findBtn">
+							</li>	
+						</ul>
+					</div>
+				</fieldset>
+			</form>
+		</article>
+	</section>
+	<aside>
+		<ul class="xnb">
+			<li><a href="#">이용약관</a></li>
+			<li><a href="#">개인정보취급방침</a></li>
+			<li><a href="#">고객센터</a></li>
+		</ul>
+	</aside>
+	<footer>
+		<div class="footer_wrap">
+			<p class="tel">1566.5678</p>
+			<p class="info">상호 : 네모샵  대표 : 김네모  주소 : 광주광역시 서구 경열로 3</p>
+			<p class="copyright">copyright&copy; 2017. <strong>nemoshop</strong>. ALL RIGHTS RESERVED</p>
+		</div>
+	</footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

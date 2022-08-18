@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+* {		/*공용 선택자: 대다수의 요소들에게 공통으로 전달되는 특성 */
+	margin:0;				/*초기화/ 리셋 스타일 */	/*바깥여백*/
+	padding:0;				/*초기화/ 리셋 스타일 */	/* 안 여백 */
+}
+body {
+	background-image: url("../images/pat1.png");	/*배경-이미지 : 경로()*/	
+}
+header {					/* 태그 선택자 */
+	background-color: white;
+}
+#logo {						/* 아이디  선택자 id ="logo"인 요소에 적용  */
+	width: 100px;
+	height: 100px;
+}
+.gnb{
+	text-align: center;		/*텍스트 가운데*/
+}
+li {
+	background: white;		/*background = background-color */
+	margin: 15px 0;			/* 바깥 여백 */
+	display: inline-block;	/* 표시방법 : 인라인-블럭 */
+}
+a {
+	text-decoration: none;	/*밑줄X*/
+	color: #696463;
+	font-size: 20px;
+	margin: 10px;
+}
+#hero {
+	height: 360px;
+	width: 600px;
+}
+.mx-auto {					/*클래스 선택자 class="mx-auto"인 요소에 적용 */
+	margin: 0px auto;		/* m-margin x-수평 */
+}
+.hero_img {
+	margin: 50px auto;		/*크기 값을 알고 사용*/
+}
+.d-none{	/*클래스 선택자 : 여러번 사용 가능*/
+	display:none;	/*표시 : 안함*/
+}
+.center {
+	text-align:center;
+}
+.cap{
+	text-transform : capitalize;/*텍스트-변형 : 첫글자 대문자*/
+	font-size: 18px;
+}
+.size-0{
+	font-size:0;
+}
+#brand_name{
+	width:300px;
+	height:auto;	/*생략가능, 자동으로 설정.기본값*/
+	font-weight: bold;
+	font-size: 15px;
+}
+.border-1{
+	border:3px solid black;		/*padding 없으면 붙음*/
+}
+.mb-1{
+	margin-bottom: 1rem;		/* 1rem = 16px, root em (최 상위 요소를 기준) */
+}
+.mt-3{
+	margin-top: 3rem;
+}
+.px-1{
+	padding:0 1rem;		/*좌 우*/
+}
+.py-1{
+	padding:1rem 0;		/*상 하*/
+}
+.py-3{
+	padding:3rem 0;
+}
+.pt-3{
+	padding-top: 3rem;
+}
+.spacing{
+	letter-spacing:.5rem;	/*단어-간격 : 1rem(기본값)*/
+}
+.underline{
+	text-decoration: underline;
+}
+.bg-black{
+	background-color:black;
+}
+.text-white{
+	color:white;
+}
+.identity{
+	background-color:unset;
+}

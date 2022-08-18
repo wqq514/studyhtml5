@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>프로필</title>
+			<!-- 구글폰트적용 Do Hyeon -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+<link href="pinkicon.png" rel="shortcut icon">
+<style>
+	html{
+		scroll-behavior: smooth;		/* cnt1으로 부드럽게 이동 */
+	}
+	body{
+		height: 5000px;
+	}
+	p{
+		text-align: center;
+		font-family: 'Do Hyeon', sans-serif;
+		font-size: 0.95rem;
+	}
+	ul{
+		list-style-type: none;			/*목록의 기호 : 없음*/
+		display: flex;			/*표시(레이아웃방식) : 플렉스*/
+		column-gap: 5rem;			/*컬럼-간격: (각각)5rem (알엠 rem vs 엠 m)*/
+		justify-content: center;			/*내용-정렬: 가로 중앙에*/
+	}
+	.title{			/*.title: title 클래스 (선택자)2*/
+		font-family: 'Do Hyeon', sans-serif;		/*글꼴: cursive(필기체 느낌)*/
+		font-size: 3rem;		/*글꼴-크기: (기본값의) 3(배수)*/
+		text-transform: capitalize;			/*텍스트-변형: (첫 글자만) 대문자*/
+	}
+	#cnt1{
+		margin-top: 3000px;			/*위쪽-마진: 3000px*/
+	}
+	#about{
+		text-align: center;		/*텍스트-정렬: (가로) 가운데*/
+	}
+	#sns{
+		text-align: center;
+	}
+	#map{
+		text-align: center;
+	}
+	h2{
+		display: none;		/*표시: 안함*/
+	}
+	.nav_items{			/* .=class*/
+		background: yellow;		/* 배경색*/
+	}
+	a{		/* a찾아서 실행(a href)*/
+		text-transform: capitalize;		/*텍스트-변형:(첫 글자만)대문자*/
+		text-decoration: none;		/*unline, overline*/
+	}
+</style>
+</head>
+<body id="home">
+	<p><img src="photo.jpg" alt="프로필 사진"></p>
+	<p class="title">죠르디</p>
+	<h1 id="about">about</h1>			<!-- h1~h6 : headline, heading -->
+	<p>죠-하! 나는 빙하기에서 갓 돌아온 짠내나는 취준 공룡 죠르디</p>
+	<h2>내비게이션</h2>
+	<ul class="nav_items">
+		<li><a href="#home">home</a></li>		<!-- #뒤에 home주소붙이면 이동 -->	
+		<li><a href="#about">about</a></li>
+		<li><a href="#sns">sns</a></li>
+		<li><a href="#map">map</a></li>
+	</ul>
+	<h3 id="sns">sns</h3>
+	<ul>
+		<li><a href="#cnt1" ><img src="call.png" alt="전화걸기"></a></li>
+		<li><a href="https://www.instagram.com"><img src=" insta.png" alt="인스타그램"></a></li>
+		<li><a href="#"><img src="gmail.png" alt="메일"></a></li>		<!-- 주소로 이동, target:새 탭 -->
+	</ul>
+	<h4 id="map">map</h4>
+		<!-- map: (특정위치) 내보내기 기능 -->                                                                                                                                                 
+		<a href="http://naver.me/G7yGmuuZ"><img src="map.png" alt="지도"></a>	
+	<div id="cnt1">
+		<p>cnt1 입니다</p>
+		<a href="#">TOP ▲</a>
+	</div> <!-- # = id -->
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</body>
+</html>

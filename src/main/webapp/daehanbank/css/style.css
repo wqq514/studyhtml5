@@ -1,0 +1,303 @@
+@charset "UTF-8";
+
+:root{
+	--base-color:#333;
+	--base-font-size:16px;
+}
+body{
+	font:var(--base-font-size)/1.5 "Noto Sans KR", sans-serif;
+	color:var(--base-color);
+}
+
+ul{
+	list-style-type: none;
+}
+
+a,a:link{
+	text-decoration: none;
+	color:inherit;
+}
+
+.d-none{
+	display: none;
+}
+
+/* Layer Popup */
+.show{
+	display: block !important;
+	
+}
+#layer-popup{
+	background-color: rgba(0,0,0,.3);			/* red, green,blue,alpha(transparency, opacity) */
+	position: fixed;
+	height: 100%;
+	z-index:100;
+	display: none;
+}
+.popup-wrap{
+	position: absolute;
+	left:50%;
+	right:50%;
+	margin-left:400px;
+	margin-top:220px;
+	width:500px;
+	height:450px;
+	background: white;
+	box-shadow: 0 0 5px 10px rgba(0,0,0,.4);	/* 박스-그림자 : 바깥 그림자 x y size radius color */
+	z-index: 10;								/*포지션 쌓이는 위치 : 0,1,2,...알아서 증가 또는 사용자 지정값(높은값일수록 앞으로) */
+}
+.btn-close{
+	background: black;
+	color:white;
+	padding:5px 10px;
+	border-radius: 5px;
+	position: absolute;
+	right:50px;
+	bottom:50px;
+}
+
+header::after, footer::before{
+	content:'';
+	display: block;
+	width:100%;
+	height: 1px;
+	background-color: #333;
+}
+.header-wrap{
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.logo{
+	width:340px;
+	height: 100px;
+	overflow: hidden;
+}
+.logo a{
+	display: block;
+}
+.logo img{
+	width:auto;
+	height: 100%;
+}
+#gnb{
+	display: flex;
+}
+#gnb > li{
+	margin-right: 80px;
+	position: relative;									/* 부모요소 */
+}
+#gnb > li:hover .lnb{
+	display: block;
+}
+#gnb > li:nth-child(4){
+	margin-right: 20px;									/* 4번째 margin 40px */
+}
+.lnb{
+	display: none;
+	width:120px;
+	background-color:#1B1D4F;
+	color:white;
+	position: absolute;									/* 자식요소 */
+	left:0;
+	margin-left: -45px;
+}
+.lnb li{
+	text-align: center;
+	margin:.5rem 0;
+}
+.slide{
+	display: flex;
+	justify-content: center;
+}
+.article-wrap{
+	display: flex;
+	max-width:1200px;
+	margin:0 auto;
+}
+.text-title{
+	font-weight: bold;
+	margin-bottom: .5rem;
+}
+.text-body{
+	margin-bottom: .5rem;
+	font-size:.875rem;
+}
+#showDetails{
+	float: right;
+}
+.quick-links{
+	text-align: center;
+	justify-content: space-around;
+	margin-top: 2rem;
+	align-items: center;
+	align-items: baseline;
+	font-size: 20px;
+	color:#333;
+}
+.icons img{
+	margin-bottom: 1rem;
+}
+.news, .event, .icons{
+	flex:1;
+}
+.news-text{
+	margin-left:.5rem;
+}
+.news-lastest{
+	display: flex;
+}
+.text-info{
+	font-size:.8rem;
+}
+.quick-links{
+	display: flex;
+}
+.logo-footer img{
+	width:auto;
+	height: 100px;
+	float: left;
+	margin-right:2rem;
+}
+.logo-footer{
+	display: flex;
+	align-items: center;
+}
+.links{
+	display:flex;
+	column-gap: 1.5rem;
+}
+.links-owner{
+	max-width:100%;
+	color:#333;
+}
+
+.footer-wrap{
+	max-width:1200px;
+	margin:0 auto;
+}
+.owner{
+	font-size:10px;
+	margin-top:.5rem;
+}
+#mobileNav{
+	position: fixed;
+	width:100vw;
+	height: 100vh;
+	z-index: 200;
+	top:0;
+	left:0;
+	background:#1B1D4F;
+	display: none;
+}
+#mobileNav dl ul{
+	display: flex;
+}
+
+.burger #mobileNav{					/* pc화면에서 숨김 */
+	display: none;
+}
+#closer{
+	background-color: transparent;	/* 투명 */
+	border:2px solid white;
+	width:130px;
+	height: 40px;
+	border-radius: 40px;
+	color:white;
+}
+#closer:hover{
+	background-color: black;
+	border:2px solid black;
+}
+.d-flex{
+	display: flex;
+}
+.flex-end{
+	justify-content: flex-end;	/* right */
+}
+.flex-start{
+	justify-content: flex-start;	/* left */
+}
+.scale-up{
+	font-size:2em;
+}
+@media screen and (max-width:480px){
+	.main-nav{
+		display: none;
+	}
+	/* 모바일 vp 사이즈에 해당하면 보임 */
+	.burger{
+		display: flex;
+		flex-direction: column;
+		width:40px;
+		height: 40px;
+	}
+	.burger > span{
+		display: block;
+		height:5px;
+		width:100%;
+		background: black;
+	}
+	.burger > span:nth-child(2){
+		margin:10px 0;
+	}
+	#imgs{
+	overflow: hidden;
+	}
+	#imgs img{
+		object-fit:cover;		/* max-width:100% */
+	}
+	.article-wrap{
+		flex-direction: column;
+		row-gap:1rem;
+		padding:0 1.875rem;
+	}
+	.news-lastest{
+		flex-direction: column;
+	}
+	.news-text{
+		order:0;
+	}
+	.news-lastest img{
+		order:1;
+	}
+	.foorer-wrap{
+		flex-direction: column;
+		height: auto;
+		align-items: center;		/* align-items -> 교차축 정렬 */
+	}
+	#mobileNav.show{		/* 아이디 mobileNav가 클래스, show를 갖고 있을때 */
+		display: block;
+	}
+}
+
+@media screen and (max-width:425px){
+
+}
+
+@media screen and (max-width:375px){
+
+}
+
+@media screen and (max-width:360px){
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

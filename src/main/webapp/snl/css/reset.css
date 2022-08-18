@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+/*
+reset.css : 스타일 리셋, 리셋 스타일 / 스타일 초기화 모드
+→각 브라우저 제조사들이 갖는 기본 스타일을 초기상태로 만들어 디자인하기 위해
+
+ex) h1 : 크코 검고 굵은 텍스트 (스타일) --> 작고 보통 두계의 글자체로 표현 (스타일)
+
+1.인터넷에서 reset검색, 다운로드 또는 연결(CDM) 사용
+
+2.최소한의 reset스타일 작성해서 사용
+
+@ : at-rule
+@import"reset.css";
+*/
+
+*{
+	margin:0;
+	padding:0;
+}
+a{
+	text-decoration:none;
+	color:inherit;
+}
+ul{
+	list-style: none;
+}
+table, th, td {
+	border: 1px solid #333;
+	border-collapse: collapse;
+}

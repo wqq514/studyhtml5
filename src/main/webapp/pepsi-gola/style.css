@@ -1,0 +1,239 @@
+@charset "UTF-8";
+
+/* 공용 선택자 : 모든 (하위)요소들을 초기화(reset) 하는 용도 */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style: none;     /* 목록(기호)-스타일 : 없음 */
+}
+
+a {
+	text-decoration: none;
+	color: inherit;       /* 색상 : (부모로부터) 상속 */
+}
+
+
+/* ---------------- header ---------------------*/
+#logo {
+	width: 100px;
+	height: 110px;
+}
+.mx-auto {
+	margin: 0 auto;
+}
+.py-3 {
+	padding: 3rem 0;
+}
+
+/* ---------------- nav ---------------------*/
+.mainNav {
+	background-color: #005891;
+	font-size: 14px;           /* 글꼴-크기 : 14px */
+	font-weight: bold;         /* 글꼴-두께 : 두껍게 */
+}
+#gnb {
+	display: flex;             /* 표시 : 플렉스 */
+	justify-content: center;   /* 콘텐츠-정렬 : 가로 가운데 */
+	column-gap: 2rem;          /* 컬럼-간격  */
+	font-size:14px;
+	font-weight:bold;
+	padding: 1rem;
+}
+#gnb a:hover{
+	color:#fcff00;
+}
+#visual{
+	width:800;
+	height: 500;
+	text-align: center;
+	padding: 2rem;
+}
+#movie{
+	text-align: center;
+}
+#movie h1{
+	font-size:22px;
+	font-weight: bold;
+	padding-bottom: 5px;
+}
+#movie h2{
+	font-size: 16px;
+	color:#555;
+	padding-bottom:2rem;
+}
+
+.py-1 {
+	padding: 1rem 0;
+} 
+.py-2 {
+	padding: 2rem 0;
+}
+.py-3 {
+	padding: 3rem 0;
+}
+.my-1 {
+	margin: 1rem 0;
+}
+.my-2 {
+	margin: 2rem 0;
+}
+.my-3 {
+	margin: 3rem 0;
+}
+/* ---------------- section ---------------------*/
+.align-center {
+	text-align: center;
+}
+.d-none {
+	display: none; /* 표시 : 없음 */
+}
+.gap-0 {
+	font-size: 0;
+}
+.big {
+	font-size: 22px;
+}
+.small {
+	font-size: 16px;
+	color: #555;
+}
+.sns{
+	justify-content: center;
+	display: flex;
+	column-gap: 1rem;
+	padding:6rem 0;
+}
+.upper{
+	font-size:1rem;
+	color:#005891;
+	text-align: center;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.number{
+	font-weight: bold;
+	font-size: 2rem;
+	color:#005891;
+	text-align: center;
+	padding-bottom:5rem;
+}
+footer{
+	padding:5rem;
+	text-align: center;
+}
+.copy{
+	font-size:11px;
+	text-align: center;
+}
+.addr{
+	font-size:13px;
+}
+.big-text{
+	font-size:30px;
+	font-weight: bold;
+	color:#005891;
+	text-align: center;
+	padding-bottom: 3rem;
+}
+.absolute-right{
+	position: absolute;
+	right: 1%;
+	top:1%;
+	display: none;
+}
+
+@media screen and (min-width:320px) and (max-width:550px){
+	body{
+		overflow-x:hidden;
+	}
+	.only_mobile{
+		display: block;
+	}
+	.only_pc{
+		display: none;
+	}
+	footer{
+		max-width:100%;
+		background-color: #005891;
+		color:white;
+	}
+	#visual img{
+		max-width:100%;
+		height: auto;
+		padding-bottom: 3rem;
+	}
+	#visual{
+		padding:0;
+	}
+	.moviePoster img{
+		width:calc(50% - 10px);				/* Edge 형태의 기기의 경우 가장자리 간격을 일부 크기에 반영 */
+	}
+	.material-symbols-outlined{
+		position:fixed;
+		right: 0;
+		padding:1rem;
+		color:#005891;
+	}
+	#mobile_panel{
+		z-index: 10;							/* 단위값 없음 */
+	}
+	.show{
+		display: block !important;
+	}
+	.mobile_links li{
+		margin-bottom: 1rem;
+		text-align: center;
+		font-size:20px;
+	}
+	.underlined{
+		border-bottom: 2px solid #fafafa;
+		text-align: center;
+		font-size:2rem;
+		margin: 3rem 2rem;
+		padding-bottom: 1rem;
+	}
+
+	.blue{
+		color: #005891;
+	}
+	.blue-bg{
+		background-color:#005891;
+	}
+	.text-white{
+		color:white;
+	}
+	.fixed{
+		position: fixed;
+		width: 70vw;					/* viewport width : 뷰포트 가로, 가로를 100조각으로 쪼갠 비율 */
+		height: 100vh;					/* viewport height: 뷰포트 세로, 세로를 100조각으로 쪼갠 비율 */
+		right:0;
+	}
+}
+
+
+
+/*	about   */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

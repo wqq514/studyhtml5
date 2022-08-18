@@ -1,0 +1,141 @@
+@charset "UTF-8";
+@import"reset.css";
+
+
+/*=====common=====*/
+.tac {
+	text-align: center;
+}
+.text-center {
+	text-align: center;
+}
+.text-right {
+	text-align: right;
+}
+.font-bold {
+	font-weight: bold;
+}
+.d-none {
+	display: none;
+}
+.justify-center {	/* flex의 item 정렬 방법 */
+	justify-content: center;
+}
+
+.logo {
+	width:154px;
+	height:152px;
+}
+.mx-auto {
+	margin:0 auto;
+}
+.py-1 {
+	padding:1rem 0;		/* y축 x축 */
+}
+.gap-1 {
+	column-gap: 3rem;	/*  */
+}
+.py-top {
+	padding-top:2rem;
+}	
+.bg-color {
+	background-color: black;
+	height:335px;
+}
+
+.hero {
+	overflow:hidden;	/* 넘침 : 숨김 */
+}
+
+
+
+#gnb {
+	display: flex;
+}
+#gnb>li:hover{			/* hand over 마우스 오버시*/
+	background: #01ccff;
+}
+#gnb>li {
+	padding:1rem .5rem ;
+}
+.nav-main {
+	background-color: black;
+	color:white;
+	font-size: 18px;
+}
+#xnb {
+	display: flex;
+}
+.nav-sub {
+	background-color: #fafafa;
+	font-size: 13px;
+	color: #666666;
+}
+.underline {
+	text-decoration: underline;
+}
+.footer-logo {
+	width:154px;
+	height:152px;
+	padding:3rem;
+}
+.w600 {
+	width:800px;
+}
+caption {
+	margin: 2rem 1rem;		 		/*상 하 2rem 좌 우 1rem 
+	margin: 2rem;				 	상 하 좌 우 모두 2rem 
+	margin: 2rem auto 1rem;		 	상2rem 좌우auto 하1rem 
+	margin: 0 1rem 2rem .5rem;		 상0 우1rem 하2rem 좌.5rem */
+	font-weight: bold;
+	font-size: 18px;
+}
+th, td {
+	padding:8px 1rem;		/*상 하, 좌 우 */
+}
+td {
+	text-align: center;
+}
+th {
+	width:25%;
+}
+.warning {
+	background-color: #ffeded;
+}
+.border-left-none {		/* 표 왼쪽 선 없애기 */
+	border-left-width: 0;
+	border-right-width: 0;
+}
+.border-tb {
+	border-bottom-style: solid;
+	border-top-style: solid;
+}
+
+.indent-1 {
+	text-align:left;
+	text-indent: 1rem; 
+}
+.nav-sub {
+	background-color: #fafafa;
+	font-size: 13px;
+	border-top:2px solid #666666;		
+	margin-top: 4rem;
+}
+p {
+	color:#999999;
+	text-align: center;
+	font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

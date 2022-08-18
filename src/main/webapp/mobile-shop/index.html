@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<style>
+html{
+	height:100%;
+}
+body{
+	background: linear-gradient(to bottom,#8BD5FF,rgba(128,13,243,0),rgba(106,8,204));
+}
+#product{
+	width:500px;
+	height:400px;
+	background: url("images/smart.png") no-repeat 0 0;
+	transition:all .3s ease-in-out
+}
+</style>
+</head>
+<body>
+	<h1>MOBILE SHOP</h1>
+	<h2>스마트 기기 온라인 반값 모바일 샵, 오늘의 할인을 확인하세요!</h2>
+	<button>스마트폰</button>
+	<button>태블릿PC</button>
+	<button>블루투스이어폰</button>
+	<button>스마트워치</button>
+	<div class="items">
+		<div class="btns">
+			<a href="#">이전</a>
+			<a href="#">다음</a>
+		</div>
+		<div id="product">
+			<!-- IT제품 사진 -->
+		</div>
+		<ul class="pager">
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	<div class="desc">
+		<h2>상품설명</h2>
+		<p>상품설명 텍스트 나열하기</p>
+	</div>
+	<script>
+	$(function(){
+		$("button").eq(0).click(function(){
+			$("#product").css("backgroundPositionX",0);
+		})
+		$("button").eq(1).click(function(){
+			$("#product").css("backgroundPositionX","-500px");
+		})
+		$("button").eq(2).click(function(){
+			$("#product").css("backgroundPositionX","-1000px");
+		})
+		$("button").eq(3).click(function(){
+			$("#product").css("backgroundPositionX","-1500px");
+		})
+	})
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

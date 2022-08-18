@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8" />
+	<title>폼 관련 태그들</title>
+	<style>
+	fieldset{
+		border: 0;
+	}
+	.d-none{
+		display: none;
+	}
+	</style>
+</head>
+<body>
+	<h1>폼 태그</h1>
+	<form action="write.jsp">
+	<fieldset>
+		<legend class="d-none">사용자명</legend>
+		<label for="user_name">이름</label>
+		<input type="text" id="user_name" name="user_name" required/>
+	</fieldset>
+		<fieldset>
+			<legend class="d-none">취미</legend>
+			<label for="hobby1">낮잠</label>
+			<input type="checkbox" id="hobby1" name="hobby1" value="sleep">			<!-- checbox는 여러개 선택 가능 -->
+			<label>														<!--input이 안에있을때는 for생략가능 -->
+				TV시청
+				<input type="checkbox" name="hobby2" id="hobby2" value="tv" />
+			</label>
+		</fieldset>
+		<fieldset>
+			<legend class="d-none">결혼유무</legend>
+			<label for="hobby1">미혼</label>
+			<input type="radio" id="married1" name="is_married" value="not married"	checked>
+			<label>														<!--input이 안에있을때는 for생략가능 -->
+				<input type="radio" name="is_married" id="married" value="married"/>	<!-- radio는 하나만 선택 -->
+				기혼
+			</label>
+		</fieldset>
+		<button type="submit">전송</button>											<!-- input : submit 과 같음 -->
+	</form>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$("button").click(function(){
+				//클릭하면 입력폼의 정보 출력
+				//실제로는 서버에 전송해서 회원등록하거나 부가적인 데이터 수집과정이 진행되어야 한다.
+				e.preventDefault();										//폼 태그의 기본 이벤트 : 데이터 전송이 이루어지면 페이지 리로드 금지
+				const user_name = $("#user_name").val();					// .val : 입력폼 값을 get/set 메소드
+				console.log("이름 : "+ user_name);
+			})
+		})
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
